@@ -34,7 +34,7 @@ public class OrderFulfillmentService {
 
     @Async("asyncTaskExecutor")
     public void notifyUser(Order order) throws InterruptedException {
-        Thread.sleep(4000L);
+        Thread.sleep(1000);
         logger.info("Notified to the user : " + Thread.currentThread().getName());
     }
 
@@ -52,13 +52,13 @@ public class OrderFulfillmentService {
 
     @Async("asyncTaskExecutor")
     public void assignDeliveryPartner(Order order) throws InterruptedException {
-        Thread.sleep(3000L);
+        Thread.sleep(2000L);
         logger.info("Product assigned to deliver partner: " + Thread.currentThread().getName());
     }
 
     @Async("asyncTaskExecutor")
     public void dispatch(Order order) throws InterruptedException {
-        Thread.sleep(1000L);
+        Thread.sleep(2000L);
         logger.info("Product has been dispatched: " + Thread.currentThread().getName());
     }
 }
